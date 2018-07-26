@@ -3,8 +3,11 @@
 #---------------------------------#
 version: 2.3.{build}.0
 install:
-    - git clone https://github.com/PowerShell/DscResource.Tests
-
+    - git clone https://github.com/johlju/DscResource.Tests
+    - ps: Push-Location
+    - ps: cd "$env:APPVEYOR_BUILD_FOLDER\DscResource.Tests"
+    - git checkout fix-info-message
+    - ps: Pop-Location
     - ps: |
         $moduleName = 'CertificateDsc'
         Import-Module "$env:APPVEYOR_BUILD_FOLDER\DscResource.Tests\AppVeyor.psm1"
@@ -38,4 +41,5 @@ deploy_script:
             -ResourceModuleName $moduleName
 
         Invoke-AppVeyorDeployTask `
-            -OptIn @()
+            -OptIn @('PublishExample') `
+            -Branch @('debug-publish-example')
