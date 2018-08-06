@@ -6,16 +6,17 @@ install:
     - git clone https://github.com/PowerShell/DscResource.Tests
 
     - ps: |
-        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_REPO_NAME: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_REPO_NAME)
-        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_COMMIT: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_COMMIT)
-        Write-Verbose -Message ('APPVEYOR_REPO_COMMIT: {0}' -f $env:APPVEYOR_REPO_COMMIT)
-        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)
-        Write-Verbose -Message ('APPVEYOR_ACCOUNT_NAME: {0}' -f $env:APPVEYOR_ACCOUNT_NAME)
-        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME)
-        Write-Verbose -Message ('APPVEYOR_REPO_NAME : {0}' -f $env:APPVEYOR_REPO_NAME )
-        Write-Verbose -Message ('APPVEYOR_REPO_BRANCH: {0}' -f $env:APPVEYOR_REPO_BRANCH)
-        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME)
-        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME)
+        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_REPO_NAME: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_REPO_NAME) -Verbose
+        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_COMMIT: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_COMMIT) -Verbose
+        Write-Verbose -Message ('APPVEYOR_REPO_COMMIT: {0}' -f $env:APPVEYOR_REPO_COMMIT) -Verbose
+        Write-Verbose -Message ('APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH: {0}' -f $env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH) -Verbose
+        Write-Verbose -Message ('APPVEYOR_ACCOUNT_NAME: {0}' -f $env:APPVEYOR_ACCOUNT_NAME) -Verbose
+        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME) -Verbose
+        Write-Verbose -Message ('APPVEYOR_REPO_NAME : {0}' -f $env:APPVEYOR_REPO_NAME ) -Verbose
+        Write-Verbose -Message ('APPVEYOR_REPO_BRANCH: {0}' -f $env:APPVEYOR_REPO_BRANCH) -Verbose
+        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME) -Verbose
+        Write-Verbose -Message ('APPVEYOR_PROJECT_NAME: {0}' -f $env:APPVEYOR_PROJECT_NAME) -Verbose
+
 
         $moduleName = 'CertificateDsc'
         Import-Module "$env:APPVEYOR_BUILD_FOLDER\DscResource.Tests\AppVeyor.psm1"
