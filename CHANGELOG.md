@@ -43,7 +43,7 @@
   - Changed all MSFT_xResourceName to MSFT_ResourceName.
   - Updated DSCResources, Examples, Modules and Tests for new naming.
   - Updated Year to 2018 in License and Manifest.
-  - Updated README.md from xCertificate to CertifcateDsc
+  - Updated README.md from xCertificate to CertificateDsc
   - Removed unnecessary code from:
     - CertificateDsc\Modules\CertificateDsc\DSCResources\MSFT_CertReq\MSFT_CertReq.psm1
       - Deleted $rspPath = [System.IO.Path]::ChangeExtension($workingPath, '.rsp')
@@ -55,7 +55,7 @@
 ## 3.1.0.0
 
 - xCertReq:
-  - Fixed behaviour to allow certificate templates with spaces in the name
+  - Fixed behavior to allow certificate templates with spaces in the name
 - Added `Documentation and Examples` section to Readme.md file - see
   [issue #98](https://github.com/PowerShell/xCertificate/issues/98).
 - Changed description in Credential parameter of xPfxImport resource
@@ -74,7 +74,7 @@
 - Fixed bugs in examples.
 - Updated License and Manifest Copyright info to be 2017 Microsoft Corporation.
 - xCertReq:
-  - BREAKING CHANGE: Changed default Keylength to 2048 bits to meet
+  - BREAKING CHANGE: Changed default key length to 2048 bits to meet
     [Microsoft Security Advisory](https://support.microsoft.com/en-us/help/2661254/microsoft-security-advisory-update-for-minimum-certificate-key-length).
   - Fixed spelling mistakes in MOF files.
 - Added .github support files:
@@ -97,7 +97,7 @@
   - Minor corrections to style to be HQRM compliant.
   - Improved Verbose logging by writing all lines of CertReq.exe output.
   - Fixed CA auto-detection to work when CA name contains a space.
-- Corrected all makrdown rule violations in README.MD.
+- Corrected all markdown rule violations in README.MD.
 - Added markdownlint.json file to enable line length rule checking in VSCode
   with [MarkdownLint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
   installed.
@@ -129,7 +129,7 @@
 - xCertReq:
   - Fixed issue where xCertReq does not identify when DNS Names in SANs are incorrect.
   - Added Certificate Authority auto-discovery to resource xCertReq.
-  - Added SAN and certificate template name to xCertReq's Get-TargetResource
+  - Added SAN and certificate template name to Get-TargetResource in xCertReq.
   - Added new parameter UseMachineContext to be able to use CA templates that try
     to fill the subject alternative name
 - CertificateDSc.Common:
@@ -224,7 +224,7 @@
   it mandatory
 - Updated xPfxImport with new Ensure support
 - Updated xPfxImport with support for the CurrentUser value
-- Updated xPfxImport with validationset for the Store parameter
+- Updated xPfxImport with validation set for the Store parameter
 - Added new resource: xCertificateImport
 
 ## 1.1.0.0

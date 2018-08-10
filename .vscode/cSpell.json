@@ -1,0 +1,27 @@
+{
+    "ignorePaths": [
+        ".git/*",
+        ".vscode/*",
+        "DSCResource.Tests/*",
+        "DscResource.Tests/*"
+    ],
+    "language": "en",
+    "dictionaries": [
+        "powershell"
+    ],
+    "words": [
+        "FIPS",
+        "MSFT",
+        "HQRM",
+        "markdownlint",
+        "Chocolatey",
+        "codecov"
+
+    ],
+    "ignoreRegExpList": [
+        "\\.gitignore",
+        "\\.gitattributes",
+        "AppVeyor",
+        "opencode@microsoft.com"
+    ]
+}
